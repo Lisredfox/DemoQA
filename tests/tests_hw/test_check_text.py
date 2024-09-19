@@ -6,9 +6,6 @@ def test_page_elements(browser):
     elements_page = ElementsPage(browser)
     demo_qa_page = DemoQa(browser)
 
-    # elements_page.visit()
-    # assert elements_page.text.get_text() == 'Elements'
-
     demo_qa_page.visit()
     assert demo_qa_page.footer_text.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
 
