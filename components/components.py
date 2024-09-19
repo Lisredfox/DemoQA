@@ -10,3 +10,6 @@ class WebElement:
 
     def find_element(self):
         return self.driver.find_element(By.CSS_SELECTOR, self.locator)
+
+    def get_text(self):
+        return str(self.find_element().text)
