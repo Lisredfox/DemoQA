@@ -6,6 +6,11 @@ def test_page_elements(browser):
     elements_page = ElementsPage(browser)
     demo_qa_page = DemoQa(browser)
 
+    elements_page.visit()
+    assert elements_page.icon.exist()
+    assert elements_page.btn_sidebar_first.exist()
+    assert elements_page.btn_sidebar_first_textbox.exist()
+
     demo_qa_page.visit()
     assert demo_qa_page.footer_text.get_text() == '© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.'
 
