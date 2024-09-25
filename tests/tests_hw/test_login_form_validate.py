@@ -13,3 +13,4 @@ def test_login_form_validate(browser):
     formpage.btn_submit.click_force()
     time.sleep(2)
     assert formpage.user_form.get_dom_attribute('class') == 'was-validated'
+

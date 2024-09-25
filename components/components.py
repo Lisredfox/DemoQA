@@ -11,6 +11,10 @@ class WebElement:
     def click(self):
         self.find_element().click()
 
+    def click_x(self, x):
+        for i in range(x):
+            self.find_element().click()
+
     def click_force(self):
         self.driver.execute_script('arguments[0].click();', self.find_element())
 
@@ -53,6 +57,9 @@ class WebElement:
         if len(value) > 0:
             return value
         return True
+
+    def check_css(self, style, value=''):
+        return self.find_element().value_of_css_property(style) == value
 
     def scroll_to_element(self):
         self.driver.execute_script(
