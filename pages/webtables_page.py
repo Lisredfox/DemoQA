@@ -20,3 +20,4 @@ class WebTables(BasePage):
                                  "#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div.web-tables-wrapper > div.ReactTable.-striped.-highlight > div.rt-table > div.rt-tbody > div:nth-child(3) > div")
         self.edit_record_button = WebElement(driver, "#edit-record-1")
         self.delete_button_2 = WebElement(driver, "#delete-record-1")
+        self.header_resize = WebElement(driver, "div > div.rt-th.rt-resizable-header")
